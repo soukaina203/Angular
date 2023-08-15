@@ -1,0 +1,20 @@
+<!-- String interpolation -->
+<h1>{{name}}</h1>
+<h1>{{age}}</h1>
+<!-- property binding -->
+<img [src]=" image " alt="">
+
+<!-- Two way data binding -->
+<input type="text" [(ngModel)]="name1" name="" id="">
+<!-- event Binding -->
+<button (click)="changeName()">Click here</button>
+
+<!-- directives  *ngIf *ngFor-->
+<img [src]=" image " *ngIf="disp==true" alt="">
+<!-- trick -->
+<button (click)="disp=!disp">click here </button>
+
+<div *ngFor="let i of people">
+<h1>{{i.name}}</h1>
+<h1>{{i.age}}</h1>
+</div>
