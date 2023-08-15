@@ -8,19 +8,25 @@ import { FirstComponent } from './first/first.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
-
+import { ProductComponent } from './product/product.component';
+import { ProductShowComponent } from './product-show/product-show.component';
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     HomeComponent,
     AboutComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductComponent,
+    ProductShowComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
 
   ],
   providers: [],
