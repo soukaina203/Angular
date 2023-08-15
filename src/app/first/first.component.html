@@ -15,6 +15,19 @@
 <button (click)="disp=!disp">click here </button>
 
 <div *ngFor="let i of people">
-<h1>{{i.name}}</h1>
-<h1>{{i.age}}</h1>
+  <div [ngClass]="{'bg1':i.age>17,'bg2':i.age<17}">
+    <h1>{{i.name}}</h1>
+    <h1 *ngIf="i.age<15">{{i.age}}</h1>
+
+  </div>
+</div>
+<!-- switch loop -->
+<div  [ngSwitch]="color">
+<p *ngSwitchCase="'red'">Red</p>
+<p *ngSwitchCase="'blue'">blue</p>
+
+</div>
+<!-- style  -->
+<div>
+  <h1 [ngStyle]="{'color':user.bg}">{{user.nom}}</h1>
 </div>

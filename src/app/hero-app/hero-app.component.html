@@ -1,0 +1,20 @@
+<div class="heroCont">
+<h1 style="text-align: center;
+">Hero App</h1>
+<div class="inpu">
+<input type="text" placeholder="Hero Name" [(ngModel)]="name">
+<input type="number" placeholder="Power" [(ngModel)]="power">
+<input type="text" placeholder="Image " [(ngModel)]="image">
+<button style="background-color: purple; padding: 10px;color: white;
+" (click)="create()">Create</button>
+<div class="all">
+  <div *ngFor="let i of cards" class="card" [ngClass]="{'bg1':i.p<100,'bg2':i.p>100}">
+    <p> {{i.p}} </p>
+    <p> {{i.nom}} </p>
+    <img [src]="i.i" alt="">
+
+  </div>
+
+</div>
+</div>
+</div>
